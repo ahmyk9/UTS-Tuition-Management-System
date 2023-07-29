@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<GridPane  fx:controller="controller.LoginController" styleClass="background"  prefHeight="200.0" prefWidth="400.0" alignment="center" hgap="10" vgap="10"   xmlns:fx="http://javafx.com/fxml/1">
+    
+    
+    <!-- Heading-->
+    <Label       GridPane.columnIndex="0" GridPane.rowIndex="0" text= "Login" styleClass="label-h2"/>
+    
+    <!-- Email and Password section -->
+    <Label          GridPane.columnIndex="0" GridPane.rowIndex="1" text= "Email: " styleClass="label-opac"/>
+    <TextField      GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id= "emailTf" />
+    
+    
+    <Label          GridPane.columnIndex="0" GridPane.rowIndex="2" text= "Password: " styleClass="label-opac"/>
+    <PasswordField  GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id= "passwordTf" />
+    
+    <!-- Incorrect details update  -->
+    <HBox  alignment="TOP_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label fx:id="wrongLogIn" styleClass="label-error" />
+    </HBox>
+    
+    <!-- Buttons section -->
+    <HBox alignment="BOTTOM_RIGHT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+		<Button  onAction="#openOk" fx:id = "OkBtn" text= "OK"/>
+                <Button  onAction="#openCancel" fx:id = "CancelBtn"  text= "Cancel"/>
+    </HBox>
+        
+   
+          
+    
+    
+  <stylesheets>
+        <URL value="@tmsfx.css"/>
+  </stylesheets>
+  
+</GridPane>
+
+
+
+
+

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.util.*?>	
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>	
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?> 
+
+<VBox  fx:controller="controller.FacultyController" styleClass="background" prefWidth="600.0" prefHeight="400.0"  spacing="10" 
+      xmlns:fx="http://javafx.com/fxml/1" >    
+    
+  <!-- Heading -->
+  <Label text="Filters" styleClass="label-h2"/>
+  
+  
+  <!-- Name and Email section -->
+    <HBox alignment="CENTER" spacing="10">
+        
+        <Label      text= "Name: " styleClass="label-opac" />
+        <TextField  promptText= "Filter by name" fx:id="nameTf"  />
+        
+        
+        <Label      text= "Email: " styleClass="label-opac" />
+        <TextField  promptText= "Filter by email"  fx:id="emailTf"/>
+        
+    </HBox>
+    
+    <Separator />
+    
+    <!-- List View.................................................................... -->
+    
+    <TableView fx:id="studentTv" prefWidth="600" items="${controller.Faculty.students}">
+            <columns>
+
+                    <TableColumn prefWidth="200" text="Name">
+                            <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn  prefWidth="200" text="Email">
+                            <cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory>
+                    </TableColumn>
+                    
+                    <TableColumn prefWidth="200" text="Phone">
+                            <cellValueFactory><PropertyValueFactory property="phone"/></cellValueFactory>
+                    </TableColumn>
+                    
+
+            </columns>
+        </TableView>
+        
+    <Separator />
+    
+  <!-- The bottom buttons section...................................................... -->
+    
+    <HBox alignment="CENTER" spacing="10">
+        <!--<Button fx:id="AddBtn" text="Open" onAction="#handleAdd"/-->
+		<Button text="Add"      onAction="#openAdd"     fx:id = "AddBtn"     />
+                <Button text="Delete"   onAction="#openDelete"  fx:id = "DeleteBtn"   disable="true"   />
+                <Button text="Select"   onAction="#openSelect"  fx:id = "SelectBtn"   disable="true"   />
+                <Button text="SLIP"     onAction="#openSLIP"    fx:id = "SLIPBtn"     disable="true" />
+                <Button text="Report"   onAction="#openReport"  fx:id = "ReportBtn"      />
+                <Button text="Close"    onAction="#openClose"   fx:id = "CloseBtn"   />
+    </HBox>
+    
+    
+        
+    
+        
+    <!-- End of bottom buttons section..................................................-->
+  
+  <stylesheets>
+        <URL value="@tmsfx.css"/>
+  </stylesheets>
+    
+</VBox>

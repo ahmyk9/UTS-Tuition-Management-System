@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:controller="controller.SlipController" prefHeight="338.0" prefWidth="600.0" styleClass="background" alignment="CENTER_LEFT"  
+          xmlns:fx="http://javafx.com/fxml/1" >
+    
+    <padding>
+        <Insets top="10" bottom="10" left="10" right="10" />
+    </padding>
+    
+    <Label text="Tuition Slip: "     GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="label-h2"/>
+    
+    <Label text="Credits: "         GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="label"/>
+    <Label text="TotalFee: "        GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="label"/>
+    <Label text="Net Fee: "         GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="label"/>
+    
+    
+    
+    <Label fx:id="creditsDIS"       GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="text-out"/>
+    <Label fx:id="TotalFeeDIS"      GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="text-out"/>
+    <Label fx:id="netfeeDIS"        GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="text-out"/>
+    
+    <Label text="Pay Per Credit: "  GridPane.columnIndex="3" GridPane.rowIndex="1" styleClass="label"/>
+    <Label text="Scholarship: "     GridPane.columnIndex="3" GridPane.rowIndex="2" styleClass="label"/>
+    <Label text="Deduction: "       GridPane.columnIndex="3" GridPane.rowIndex="3" styleClass="label"/>
+    
+    <Label fx:id="PayPerCreditDIS"  GridPane.columnIndex="5" GridPane.rowIndex="1" styleClass="text-out"/>
+    <Label fx:id="scholarshDIS"     GridPane.columnIndex="5" GridPane.rowIndex="2" styleClass="text-out"/>
+    <Label fx:id="deductDIS"        GridPane.columnIndex="5" GridPane.rowIndex="3" styleClass="text-out"/>
+
+    <Label text=" "       GridPane.columnIndex="2" GridPane.rowIndex="7"/>
+    <Label text=" "       GridPane.columnIndex="2" GridPane.rowIndex="8"/>
+    <Label text=" "       GridPane.columnIndex="2" GridPane.rowIndex="9"/>
+    
+    <Button fx:id="CloseBtn"  onAction="#openClose" text="Close" GridPane.columnIndex="2" GridPane.rowIndex="10"/> 
+   
+    
+    
+    
+    <stylesheets>
+        <URL value="@tmsfx.css"/>
+    </stylesheets>
+    
+</GridPane>

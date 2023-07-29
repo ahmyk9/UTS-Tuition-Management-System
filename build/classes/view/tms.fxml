@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>	
+<?import javafx.geometry.Insets?>  
+<?import javafx.scene.control.*?>
+<?import java.util.*?>	
+<?import javafx.scene.*?>	
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>	
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?> 
+
+<VBox fx:controller="controller.TMSController" alignment="center" prefHeight="648.0" prefWidth="520.0" styleClass="background" spacing="10"
+      xmlns:fx="http://javafx.com/fxml/1" >
+    
+     <!-- List View.................................................................... -->
+    <TableView fx:id="studentTv" prefWidth="400" items="${controller.Faculty.students}">
+            <columns>
+
+                    <TableColumn prefWidth="100" text="Name">
+                            <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+                    </TableColumn>
+
+                    <TableColumn  prefWidth="100" text="Tuition">
+                            <cellValueFactory><PropertyValueFactory property="totalFee"/></cellValueFactory>
+                    </TableColumn>
+                    
+                    <TableColumn prefWidth="100" text="ScholarShip">
+                            <cellValueFactory><PropertyValueFactory property="scholarship"/></cellValueFactory>
+                    </TableColumn>
+                    
+                    <TableColumn  prefWidth="100" text="Deduction">
+                            <cellValueFactory><PropertyValueFactory property="deduction"/></cellValueFactory>
+                    </TableColumn>
+                    
+                    <TableColumn prefWidth="100" text="NetFee">
+                            <cellValueFactory><PropertyValueFactory property="NetFee"/></cellValueFactory>
+                    </TableColumn>
+                    
+
+            </columns>
+        </TableView>
+        
+    <Separator />
+    
+    <GridPane  prefHeight="20.0" prefWidth="600.0" styleClass="header" alignment="CENTER">
+    
+        <Label text="Total Tuition: "       GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="label"/>
+        <Label text="Total NetFee: "        GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="label"/>
+        <Label text="Total BAS: "           GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="label"/>
+
+        
+        
+        <Label fx:id="totaltut"             GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="text-out"/>
+        <Label fx:id="totalnetfee"          GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="text-out"/>
+        <Label fx:id="totalbass"            GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="text-out"/>
+        
+        <Label text="      "                     GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        
+        
+        <Label text="Total Scholarship: "   GridPane.columnIndex="3" GridPane.rowIndex="1" styleClass="label"/>
+        <Label text="Total Deduction: "     GridPane.columnIndex="3" GridPane.rowIndex="2" styleClass="label"/>
+
+
+        <Label fx:id="totalscholarship"     GridPane.columnIndex="4" GridPane.rowIndex="1" styleClass="text-out"/>
+        <Label fx:id="totaldeduction"       GridPane.columnIndex="4" GridPane.rowIndex="2" styleClass="text-out"/>
+    
+    </GridPane>
+   
+   
+
+    
+    
+    <Separator />
+    
+    <VBox alignment="CENTER" spacing="20">
+		<Button onAction="#openClose" fx:id = "CloseBtn" text="Close" />
+    </VBox>
+    
+    <stylesheets>
+        <URL value="@tmsfx.css"/>
+    </stylesheets>
+    
+</VBox>

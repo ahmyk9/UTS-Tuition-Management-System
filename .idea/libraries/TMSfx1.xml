@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="TMSfx1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/run544193604/TMSfx.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
